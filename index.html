@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- css -->
+  <link rel="stylesheet" href="./hero.css">
+  <!-- itlwind -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- font owson -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+    integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <style type="text/tailwindcss">
+    @theme {
+        --color-clifford: #da373d;
+      }
+    </style>
+  <title>Document</title>
+</head>
+
+<body>
+  <section class="">
+    <div class="layer-popuo flex justify-center items-center relative opacity-0 pointer-events-none ">
+      <div class="imgs-popup w-[50%] h-[80%] bg-[#fff] rounded-[20px] overflow-hidden">
+        <img src="" alt="" class="yas-11 object-contain ">
+      </div>
+      <div class="icon-popup">
+        <i class="prev-layer fa-solid fa-circle-chevron-left absolute left-[10px] text-[35px] text-[#fff]"onclick="prevLeyarPopup()" ></i>
+        <i class="next-layer fa-solid fa-circle-chevron-right absolute right-[10px] text-[35px] text-[#fff]" onclick="nextLeyarPopup()"></i>
+        <i class="exit-layer fa-solid fa-circle-xmark absolute top-[30px] right-[30px] text-[35px] text-[#fff]" onclick="exitLeyrPopup()"></i>
+      </div>
+    </div>
+    <div class="heder-section contenar text-center">
+      <h1 class="heder text-[30px] font-semibold">Portfolio</h1>
+      <p class="mt-10 text-[#555]">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+    </div>
+    <div class="nav-link contenar ">
+      <ul class="links flex justify-evenly  bg-[#fff] shadow-md w-[50%]">
+        <li class="link-port "><a href="#" class="text-[15px] font-semibold text-[#444] ">All Project</a></li>
+        <li class="link-port "><a href="#" class="text-[15px] font-semibold text-[#444]">Web Design</a></li>
+        <li class="link-port "><a href="#" class="text-[15px] font-semibold text-[#444]">Mobile Apps</a></li>
+        <li class="link-port "><a href="#" class="text-[15px] font-semibold text-[#444]">Branding</a></li>
+        <li class="link-port "><a href="#" class="text-[15px] font-semibold text-[#444]">UI/UX</a></li>
+      </ul>
+    </div>
+    <div class="brodact contenar grid grid-cols-3 gap-4 bg-[#fff] ">
+    </div>
+  </section>
+
+  <script src="./index.js"></script>
+</body>
+
+</html>

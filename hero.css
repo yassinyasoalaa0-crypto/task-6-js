@@ -1,0 +1,149 @@
+@import"tailwindcss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f1f5f9;
+}
+
+header {
+    margin-block: 20px;
+}
+
+
+.contenar {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.card {
+    border: 1px solid #d6d5d5;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+
+}
+
+.imgs {
+    position: relative;
+}
+
+section {
+    margin-top: 60px;
+}
+
+/* .heder-section {} */
+
+.heder {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.heder::after {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 4px;
+    border-radius: 30px;
+    background-color: #0ea5e9;
+    right: 50%;
+    transform: translate(50%);
+    bottom: -10px;
+}
+
+.nav-link {
+    margin: 50px auto;
+}
+
+.links {
+    padding: 8px 0px;
+    border-radius: 30px;
+    margin: auto;
+}
+
+.link-port {
+    padding: 12px 14px;
+}
+
+.link-port:hover {
+    background-color: #0ea4e91c;
+    border-radius: 30px;
+    transition: all 0.2s;
+}
+
+.link-port:hover a {
+    color: #0987c2;
+}
+
+.content {
+    margin: 20px 15px;
+    position: relative;
+}
+
+.content::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: #e5e3e3;
+    bottom: -18px;
+}
+
+.icons {
+    margin: 40px 15px 10px;
+}
+
+.cont-icon {
+    background-color: #0ea4e91c;
+    border-radius: 30px;
+    padding: 5px 9px;
+}
+
+.labol {
+    border-radius: 30px;
+    padding: 5px 9px;
+}
+
+.layer {
+    background-color: #0a283762;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    opacity:0 ;
+    transition: all 0.6s;
+}
+.card:hover {
+    transform: translateY(-8px);
+
+}
+.card:hover .layer{
+    opacity: 1;
+}
+
+.layer-popuo{
+    background-color: #0000007a;
+    width: 100%;
+    height:100vh;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+}
