@@ -1,0 +1,32 @@
+const projects = [
+  {
+    id: 1,
+    title: "Corporate Dashboard System",
+    description: "Pellentesque habitant morbi tristique senectus.",
+    category: "Web design",
+    isFeatured: false,
+    date: "2024",
+    tags: ["HTML", "CSS", "JavaScript"],
+    image: "./imgs/portfolio-2.webp",
+  },
+  {
+    id: 2,
+    title: "Smart Finance Application",
+    description: "Maecenas tempus tellus eget condimentum rhoncus.",
+    category: "Mobile App",
+    isFeatured: true,
+    date: "2024",
+    tags: ["Flutter", "Dart", "Firebase"],
+    image: "./imgs/portfolio-4.webp",
+  },
+  {
+    id: 3,
+    title: "Fashion Label Identity",
+    description: "Donec quam felis ultricies nec pellentesque pretium.",
+    category: "branding",
+    isFeatured: false,
+    date: "2023",
+    tags: ["Photoshop", "Illustrator", "InDesign"],
+    image: "./imgs/portfolio-6.webp",
+  },
+];

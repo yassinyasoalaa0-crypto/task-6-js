@@ -1,35 +1,3 @@
-const projects = [
-  {
-    id: 1,
-    title: "Corporate Dashboard System",
-    description: "Pellentesque habitant morbi tristique senectus.",
-    category: "Web design",
-    isFeatured: false,
-    date: "2024",
-    tags: ["HTML", "CSS", "JavaScript"],
-    image: "./imgs/portfolio-2.webp",
-  },
-  {
-    id: 2,
-    title: "Smart Finance Application",
-    description: "Maecenas tempus tellus eget condimentum rhoncus.",
-    category: "Mobile App",
-    isFeatured: true,
-    date: "2024",
-    tags: ["Flutter", "Dart", "Firebase"],
-    image: "./imgs/portfolio-4.webp",
-  },
-  {
-    id: 3,
-    title: "Fashion Label Identity",
-    description: "Donec quam felis ultricies nec pellentesque pretium.",
-    category: "branding",
-    isFeatured: false,
-    date: "2023",
-    tags: ["Photoshop", "Illustrator", "InDesign"],
-    image: "./imgs/portfolio-6.webp",
-  },
-];
 const layrpopup = document.querySelector(".layer-popuo")
 const prodactContenar = document.querySelector(".brodact")
 const ExitLayerPopup = document.querySelector(".exit-layer")
@@ -38,7 +6,7 @@ const nextPopup = document.querySelector(".next-layer")
 const prevPopup = document.querySelector(".prev-layer")
 let carentDefoltOPen = 0
 projects.forEach((product) => prodactContenar.innerHTML += `
-<div class="card overflow-hidden relative border-[#fff] duration-300 hover:shadow-xl" onclick = "openLeyrPopup(${product.id})">
+<div class="card overflow-hidden relative border-[#fff] duration-300 hover:shadow-xl " >
         <div class="imgs ">
           <img src="${product.image}" alt="" class=" ">
           <div class="layer flex items-center justify-center gap-4">
@@ -70,32 +38,66 @@ projects.forEach((product) => prodactContenar.innerHTML += `
   ` : ""}
       </div > 
     ` )
-function openLeyrPopup(projectsid) {
-  layrpopup.classList.remove("opacity-0", "pointer-events-none")
-  const LayerConten = projects.find(projects => projects.id === projectsid)
-  const carentINdex = projects.findIndex(projects => projects.id === projectsid)
-  galareImgs.src = LayerConten.image
-  carentDefoltOPen = carentINdex
-}
-function exitLeyrPopup() {
-  layrpopup.classList.add("opacity-0", "pointer-events-none")
-}
-function nextLeyarPopup() {
-  if (carentDefoltOPen >= projects.length - 1) {
-    carentDefoltOPen = 0;
-    galareImgs.src = projects[carentDefoltOPen].image
-    return;
-  }
-  carentDefoltOPen++
-  galareImgs.src = projects[carentDefoltOPen].image
-}
-function prevLeyarPopup() {
-  if (carentDefoltOPen === 0) {
-    carentDefoltOPen = projects.length - 1
-  }
-  else {
-    carentDefoltOPen--
-  }
-  galareImgs.src = projects[carentDefoltOPen].image
+const cards = document.querySelectorAll(".card")
+cards.forEach((card, index) => {
+  card.addEventListener("click", function openContntcard() {
+    location.assign(`hero.html?id=${projects[index].id}`)
+  })
+})
 
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function openLeyrPopup(projectsid) {
+//   layrpopup.classList.remove("opacity-0", "pointer-events-none")
+//   const LayerConten = projects.find(projects => projects.id === projectsid)
+//   const carentINdex = projects.findIndex(projects => projects.id === projectsid)
+//   galareImgs.src = LayerConten.image
+//   carentDefoltOPen = carentINdex
+// }
+// function exitLeyrPopup() {
+//   layrpopup.classList.add("opacity-0", "pointer-events-none")
+// }
+// function nextLeyarPopup() {
+//   if (carentDefoltOPen >= projects.length - 1) {
+//     carentDefoltOPen = 0;
+//     galareImgs.src = projects[carentDefoltOPen].image
+//     return;
+//   }
+//   carentDefoltOPen++
+//   galareImgs.src = projects[carentDefoltOPen].image
+// }
+// function prevLeyarPopup() {
+//   if (carentDefoltOPen === 0) {
+//     carentDefoltOPen = projects.length - 1
+//   }
+//   else {
+//     carentDefoltOPen--
+//   }
+//   galareImgs.src = projects[carentDefoltOPen].image
+// }
